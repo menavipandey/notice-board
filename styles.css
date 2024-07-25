@@ -1,0 +1,401 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #4c4c4c;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #71aed7;
+  --gradient-color: linear-gradient(180deg, #a777e3 0%, #6a00ff 100%);
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .tabs .tab {
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.tab a{
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.sidebar .tabs .tab:hover {
+  background-color: #34495e;
+}
+
+.sidebar .tabs .tab-active {
+  background-color: #3498db;
+}
+
+.tab1 {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab1 h1 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tab1 input[type="number"] {
+  width: 40px;
+  padding:5px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.tab1 button {
+  background-color: #a777e3;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 5px;
+  color: #fff;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab1 button:hover {
+  background-color: #633cff;
+  transform: translateY(-3px);
+}
+
+#timer-display {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.tab1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ecf0f1;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tab-active {
+  font-weight: bold;
+}
+
+
+/* Headings */
+h2 {
+  color: #34495e;
+}
+
+/* iFrame */
+iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* General Section Styles */
+.section {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2, .section h3 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+/* Book + Quote Section */
+.book-quote {
+  background-color: #f0f9ff;
+  border:2px solid #3498db;
+  text-align: center;
+}
+
+.book-quote #quote {
+  font-style: italic;
+  color: #555;
+  padding: 10px;
+  font-weight:bold;
+  /* border-left: 6px solid #3498db; */
+  margin-top: 10px;
+}
+
+/* Announcements Section */
+#announcements {
+  background-color: #f9f9f9;
+}
+
+#announcement-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #fff9a7;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#announcement-marquee div {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+  font-weight: bold;
+  color:red;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* Google Meet Section */
+.google-meet {
+  background-color: #f7f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-meet .icon {
+  width: 60px; 
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.google-meet .icon:hover {
+  transform: scale(1.1);
+}
+
+.google-meet a {
+  text-decoration: none;
+}
+
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* Icons */
+.icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Music Box */
+
+.music h2{
+  text-align: center;
+}
+.social-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.social-box .item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  font-size: 2rem; 
+  color: #c5c5c5;
+  background-color: #242529;
+  border-radius: 50px;
+  transition: color 0.15s ease-in,
+              box-shadow 0.75s cubic-bezier(0.74, 0.01, 0.02);
+}
+
+.social-box .item svg {
+  transition: transform 0.75s ease-in-out;
+}
+
+@property --fill-color {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.social-box .item:hover {
+  color: var(--primary-color);
+  --fill-color: 100%;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 1);
+}
+
+.social-box .item:hover svg {
+  transform: scale(1.25);
+}
+
+.social-box .item::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: -3px;
+  border-radius: inherit;
+  background: conic-gradient(
+    var(--primary-color) var(--fill-color),
+    transparent var(--fill-color)
+  );
+  transition: --fill-color 0.75s ease-in-out;
+}
+
+
+
+/* Opportunity Board Styles */
+.opportunity-board {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.opportunity-board h2 {
+  margin-bottom: 20px;
+}
+
+#opportunityForm {
+  margin-bottom: 20px;
+}
+
+#opportunityForm input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#opportunityForm button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#opportunityForm button:hover {
+  background-color: #3498db;
+}
+
+#opportunityList {
+  margin-top: 20px;
+}
+
+#opportunityList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#opportunityList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}

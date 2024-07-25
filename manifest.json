@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1.0",
+  "description": "This extension opens index.html in a new tab and includes a Pomodoro timer.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_icon": {
+      "128": "icon.jpg"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
